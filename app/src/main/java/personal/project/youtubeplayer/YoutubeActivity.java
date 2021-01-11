@@ -19,7 +19,7 @@ public class YoutubeActivity extends YouTubeBaseActivity implements YouTubePlaye
     static final String YOUTUBE_VIDEO_ID = ""; // insert your youtube video ID that you want to play
     static final String YOUTUBE_PLAYLIST = ""; // insert your youtube playlist ID that you want to play
 
-    // Initialize the play window for the YouTube video
+    // Initialize the play window for the YouTube videos
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

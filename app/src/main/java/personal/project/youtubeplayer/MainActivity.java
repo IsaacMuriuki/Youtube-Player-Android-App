@@ -7,9 +7,11 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+// Applications' home page
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     @Override
+    // Initialization of the butttons
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -25,11 +27,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Intent intent = null;
 
         switch(view.getId()){
+            // Play the single video
             case R.id.btnPlaySingle:
                 intent = new Intent(this, YoutubeActivity.class);
                 break;
 
             case R.id.btnStandAlone:
+                // Play the playlist
                 intent = new Intent(this, StandaloneActivity.class);
                 break;
 

@@ -15,10 +15,11 @@ import com.google.android.youtube.player.YouTubePlayerView;
 public class YoutubeActivity extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener {
 
     private static final String TAG = "YoutubeActivity";
-    static final String GOOGLE_API_KEY = "AIzaSyCpRdoZXkuH10OtkF5cEbLyaxa3t4UqXps";
-    static final String YOUTUBE_VIDEO_ID = "qAX5ge1I1EI";
-    static final String YOUTUBE_PLAYLIST = "PLeHrR-7a2Rb8D3o0Etb6l7VVfnAelQTVq";
+    static final String GOOGLE_API_KEY = ""; //insert your google API key
+    static final String YOUTUBE_VIDEO_ID = ""; // insert your youtube video ID that you want to play
+    static final String YOUTUBE_PLAYLIST = ""; // insert your youtube playlist ID that you want to play
 
+    // Initialize the play window for the you video
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,23 +61,27 @@ public class YoutubeActivity extends YouTubeBaseActivity implements YouTubePlaye
 
     private YouTubePlayer.PlaybackEventListener playbackEventListener = new YouTubePlayer.PlaybackEventListener() {
         @Override
+        // Displays a pop-up message when the video is set to play
         public void onPlaying() {
             Toast.makeText(YoutubeActivity.this, "Video is playing ok", Toast.LENGTH_LONG).show();
         }
 
         @Override
+        // Displays a pop-up message when the video is set to pause
         public void onPaused() {
             Toast.makeText(YoutubeActivity.this, "Video has paused", Toast.LENGTH_LONG).show();
         }
 
         @Override
+        // Displays a pop-up message when the video is set to play
         public void onStopped() {
             Toast.makeText(YoutubeActivity.this, "Video has stopped", Toast.LENGTH_LONG).show();
         }
 
         @Override
+        // Displays a pop-up message when the video is buffering
         public void onBuffering(boolean b) {
-
+            Toast.makeText(YoutubeActivity.this, "Video is buffering", Toast.LENGTH_LONG).show();
         }
 
         @Override
@@ -97,16 +102,19 @@ public class YoutubeActivity extends YouTubeBaseActivity implements YouTubePlaye
         }
 
         @Override
+        // Displays a pop-up message when an ad has started
         public void onAdStarted() {
             Toast.makeText(YoutubeActivity.this, "Ad has begun", Toast.LENGTH_LONG).show();
         }
 
         @Override
+        // Displays a pop-up message when the video starts
         public void onVideoStarted() {
             Toast.makeText(YoutubeActivity.this, "Video has started", Toast.LENGTH_LONG).show();
         }
 
         @Override
+        // Displays a pop-up message when the video ends
         public void onVideoEnded() {
             Toast.makeText(YoutubeActivity.this, "You have completed the video !", Toast.LENGTH_LONG).show();
         }
